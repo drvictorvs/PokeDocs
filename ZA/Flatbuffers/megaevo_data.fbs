@@ -1,0 +1,14 @@
+table MegaEvoEntry {
+  pokedex_id: uint;           // Index 0 - evolution type or stage
+  internal_id: uint;         // Index 1 - Pokémon species ID
+  form_index: uint;        // Index 2 - possibly unused or reserved
+  unknown_bool: bool;            // Index 3 - all are "true"
+  transformation_sequence: string;        // Index 4 - e.g., "m_shinka_poke"
+  short_transformation_sequence: string;    // Index 5 - e.g., "m_shinka_pcshort"
+}
+
+table MegaEvoData {
+  entries: [MegaEvoEntry];  // Array of 69 entries
+}
+
+root_type MegaEvoData;
